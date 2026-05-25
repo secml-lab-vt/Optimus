@@ -1,10 +1,9 @@
-# Chatbot-Toxicity-Injection Framework
+# DBL Framework
 
 ## Overview
 
-This framework implements a comprehensive pipeline for training, evaluating, and testing chatbot models with various toxicity injection and defense mechanisms.
+This framework implements a comprehensive DBL pipeline for training, evaluating, and testing chatbot models with various toxicity injection and defense mechanisms.
 
-> **Environment:** Use the shared conda envs under [`../environments/`](../environments/README.md). Legacy exports in this directory (`dbl_env.yml`, `environment_dbl_4.yml`, `grade_env.yml`) are deprecated; they no longer contain machine-specific `prefix:` paths.
 
 ## Core Features: Heal, DPO, and Filter
 
@@ -388,28 +387,3 @@ python parse_logs_GNU.py --sim toxic --defense yes
 python parse_logs_GNU.py --sim toxic_trojan --defense yes --component Idea2_False_True_False
 ```
 **Output**: Analyzes toxic trojan defenses with specific filter configuration.
-
-## Dependencies
-
-- **pandas**: Data manipulation and analysis
-- **numpy**: Numerical computations
-- **argparse**: Command-line argument parsing
-- **os**: File system operations
-
-## Notes
-
-- The script automatically handles missing log files by marking them as "N/F" (Not Found)
-- Results are averaged across 5 trials (k=1,2,3,4,5)
-- Standard deviations are computed for statistical significance
-- The script caches parsed results for improved performance
-
-## Troubleshooting
-
-### **Common Issues:**
-
-1. **"Not Found" errors**: Check that log files exist in the expected directory structure
-2. **Missing metrics**: Ensure log files contain the required header fields
-3. **Component mismatch**: Verify that the `--component` parameter matches the actual log file names
-
-### **Debug Mode:**
-The script prints detailed information about which files it's trying to access, making it easy to identify missing or incorrectly named files.

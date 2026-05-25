@@ -200,14 +200,3 @@ Central constants: `MERGED_PATHS`, `EXPERIMENT_CONFIGS`, `PROCESSED_TO_ADV`, `MO
 | `Advanced_Detect/consolidated_toxicity_results.txt` | Run-level metrics append log |
 | `Filtered_files/` | Processed + scores joined by `uid` |
 | `Detect_Files/Idea{1\|2}/` | Downstream detect exports (Healing / metrics) |
-
----
-
-## Related modules
-
-| Module | Role |
-|---|---|
-| `Data_processor/dbl/` | Raw DBL JSON/CSV pipeline (`Toxic/DBL/`) |
-| `chatsec2/Datasets/DBL_data/Merged_files/merge*.py` | Build merged CSVs from processed trials |
-| `Healing_creation/DBL_heal_generation.py` | Reads `Detect_Files/Idea{idea}/` |
-| `Injection_code/` | `--toxic_dataset DBL_Category1` training variants |

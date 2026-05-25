@@ -2,11 +2,6 @@
 
 Dataset ETL and split-generation layer for Optimus. Scripts normalize raw toxic/benign corpora, build Category1/Category2 training splits, and produce classifier, evaluation, and LM-detect datasets under `../Datasets/`.
 
-## Prerequisites
-
-- Python packages: `datasets`, `pandas`, `numpy`
-- Raw datasets downloaded into `../Datasets/Raw_data/` (see [Optimus README](../README.md))
-- Run scripts from their subdirectory so `../../Datasets/` paths resolve correctly
 
 ## Directory Structure
 
@@ -268,30 +263,6 @@ All paths are under `Processed_datasets/Classifier/`.
 | `generate_classifier_focal_full_heal_set.py` | `Heal_Set_Full_Focal_Classifier_dataset_Category{1,2}_{train,val,test}.json` (6 files) |
 | `generate_classifier_biased_filter.py` | **3 files** — `Biased_Classifier_dataset_Category2_{train,val,test}.json` only |
 
-### Full output list (Category × split)
-
-**`generate_classifier.py`** — benign+unsafe and unsafe+safe pairs:
-
-| Category | train | val | test |
-|---|---|---|---|
-| Category1 | `Classifier_dataset_Benign_Category1_train.json`, `Classifier_dataset_Toxic_Category1_train.json` | `..._Category1_val.json` (×2) | `..._Category1_test.json` (×2) |
-| Category2 | `Classifier_dataset_Benign_Category2_train.json`, `Classifier_dataset_Toxic_Category2_train.json` | `..._Category2_val.json` (×2) | `..._Category2_test.json` (×2) |
-
-**Single-combined variants** (`focal`, `focal_full`, and heal variants) — one file per cell:
-
-| Category | train | val | test |
-|---|---|---|---|
-| Category1 | `{Prefix}_Category1_train.json` | `{Prefix}_Category1_val.json` | `{Prefix}_Category1_test.json` |
-| Category2 | `{Prefix}_Category2_train.json` | `{Prefix}_Category2_val.json` | `{Prefix}_Category2_test.json` |
-
-`{Prefix}` values: `Focal_Classifier_dataset`, `Full_Focal_Classifier_dataset`, `Heal_Full_Focal_Classifier_dataset`, `Heal_Set_Full_Focal_Classifier_dataset`.
-
-**`generate_classifier_biased_filter.py`** — Category2 only, excludes Biased Opinion unsafe rows:
-
-| | train | val | test |
-|---|---|---|---|
-| Category2 | `Biased_Classifier_dataset_Category2_train.json` | `..._val.json` | `..._test.json` |
-
 ### Variant comparison
 
 | Script | Categories | Output shape | Key difference |
@@ -433,32 +404,3 @@ python generate_lm_detect_dbl.py
 - **Benign baselines:** PersonaChat, DailyDialog
 - **DBL:** Dialogue-based learning toxic/benign pairs
 - **Adaptive attacks:** Jailbreak suffixes (JA1C, JA1O, JA2C, JA2O)
-
-## Output Directory Map
-
-| Directory under `Datasets/` | Produced by |
-|---|---|
-| `Raw_data/` | External download |
-| `Processed_datasets/` | `01_raw_preprocessing/`, `02_category_generation/`, `dbl/` |
-| `Processed_datasets/Final_Dataset/` | `02_category_generation/`, `dbl/` |
-| `Benign/` | `03_splits/`, `persona_chat/`, `dbl/` |
-| `Toxic/` | `03_splits/`, `adaptive-attacks/`, `dbl/` |
-| `Processed_datasets/Classifier/` | `classifier/` |
-| `Evaluation/` | `evaluation/` |
-| `LM_Detect/` | `lm_detect/`, `persona_chat/`, `dbl/` |
-| `Healing/` | Legacy heal CSV sources (`Prosocial`, `Augesc`) — optional; **not** paper NH |
-| `Classifier/Context_Heal/` | 14 heal CSVs (generate via `Healing_creation/`; required for `*_heal*.py`) |
-
-## Downstream Consumers
-
-| Module | Reads from `Datasets/` |
-|---|---|
-| **Injection_code** | `Benign/`, `Toxic/`, `Evaluation/`, `Healing/` |
-| **Evaluation** | `Processed_datasets/Classifier/Heal_Full_Focal_*` |
-| **LM_Toxic_detect / PromptAttack / toxic-prompt** | `LM_Detect/` |
-
-## Notes
-
-- Many scripts use hardcoded counters and paths — edit constants before running
-- Classifier **focal_full**: use `generate_classifier_focal_full_heal.py`; Evaluation reads `Heal_Full_Focal_Classifier_dataset_Category{1,2}_{train,val,test}.json`
-- DBL pipeline is independent of the Category1/Category2 core pipeline

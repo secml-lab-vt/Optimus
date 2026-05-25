@@ -19,11 +19,6 @@ Adversarial attack against safety-aligned LLMs using AmpleGCG-Plus to generate t
 
 ## Usage
 
-### Quick Start
-```bash
-./run_amplegcg.sh
-```
-
 ### Step-by-Step
 ```bash
 # Step 1: Generate adversarial responses
@@ -44,16 +39,3 @@ python file_process.py --ample_dataset Datasets/generated_and_selected_by_highes
 - Probability-based detection method
 - 'yes'/'no' toxicity classification
 - Threshold: >0.5 probability for toxic classification
-
-## Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-Key dependencies:
-- `torch==2.1.0`
-- `transformers==4.36.0`
-- `datasets>=2.14.0`
-- `pandas>=1.5.0`
-- `tqdm>=4.64.0` 
