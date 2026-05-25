@@ -1,0 +1,20 @@
+torch
+torchvision
+torchaudio
+transformers==4.51.0
+datasets
+scikit-learn
+pandas
+numpy
+tqdm
+wandb
+matplotlib
+seaborn
+accelerate
+bitsandbytes
+sentencepiece
+protobuf
+huggingface_hub
+safetensors 
+
+python RTR_llama_guard.py --category category1 --classifier_type combined --chatbot LLAMA2-LORA

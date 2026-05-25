@@ -1,0 +1,17 @@
+defaults:
+  - default
+  - _self_
+  - train: dpo_openrlhf
+  - data: dataset_setting 
+  - log: default
+  - deepspeed: default
+  - train@deepspeed: dpo_openrlhf # openrlhf fuses all args into one, we have to duplicate one
+  - log@deepspeed: default
+  # - data@data.d1: openorca
+  # - data@data.d2: pure_bad
+  - model: llama32
+  - model@ref_model: llama32
+
+name: dpo
+seed: 42
+task: dpo # used for setting up experiment dir

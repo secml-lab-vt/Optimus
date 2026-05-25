@@ -1,0 +1,24 @@
+defaults:
+  - _self_
+  # enable color logging
+  - override hydra/hydra_logging: colorlog
+  - override hydra/job_logging: colorlog
+
+# save hydra log to /expriment
+hydra:
+  run:
+    dir: experiment/${task}/${name}
+  sweep:
+    dir: experiment/${task}/${name}
+  job:
+    name: ${name}
+    chdir: true
+
+name: ???
+seed: ???
+
+# update directory once 
+data_dir: ../../../data
+model_dir: null
+system_prompt_dir: ${data_dir}/system_prompt
+local_data_dir: ${data_dir}/local

@@ -1,0 +1,31 @@
+name: llama_guard_eval
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=12.1
+  - transformers=4.51.0
+  - datasets
+  - scikit-learn
+  - pandas
+  - numpy
+  - tqdm
+  - wandb
+  - matplotlib
+  - seaborn
+  - jupyter
+  - ipykernel
+  - pip
+  - pip:
+    - accelerate
+    - bitsandbytes
+    - sentencepiece
+    - protobuf
+    - huggingface_hub
+    - safetensors 

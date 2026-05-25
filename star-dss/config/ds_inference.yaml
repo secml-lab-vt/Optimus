@@ -1,0 +1,27 @@
+defaults:
+  - default
+  - _self_
+  - deepspeed: default
+  - data: dataset_setting 
+  - log: default 
+  - log@deepspeed: default # openrlhf fuses all args into one, we have to duplicate one
+  # - data@data.d1: openorca
+  # - data@data.d2: pure_bad
+  - model: llama32
+
+name: infer
+seed: 42
+task: infer # used for setting up experiment dir
+
+# inference configs
+infer:
+  micro_batch_size: 7
+  compute_metric: false
+  # used for guardrail evaluation
+  for_guardrail: false
+  generation_filename: null
+
+# used for creating value dataset
+save_dataset: false
+local_dataset_name: ${name}
+chunk_size: 5

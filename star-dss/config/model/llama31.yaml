@@ -1,0 +1,16 @@
+defaults:
+  - default
+
+name: "meta-llama/Llama-3.1-8B-Instruct"
+# system: ${..system_prompt_dir}/auto_email.txt
+system: null
+
+
+config_args: {}
+
+# model arguments that directly feed into HF auto model
+model_args:
+  torch_dtype: bf16
+
+tokenizer_args:
+  padding_side: left

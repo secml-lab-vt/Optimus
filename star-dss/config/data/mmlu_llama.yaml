@@ -1,0 +1,48 @@
+defaults:
+  - default
+
+id: MMLU
+path: meta-llama/Llama-3.2-1B-Instruct-evals
+name: Llama-3.2-1B-Instruct-evals__mmlu__details
+train_split: latest
+probability: null
+
+type: sft
+system_column: null
+prompt_column: input_final_prompts
+response_column: input_correct_responses
+
+# the official llama3.2 eval doesnt include <|begin_of_text|> token, not sure if we need to add this
+
+
+# name: MMLU
+# inference_batch_size: 100  # this only controls the inference.py, but not finetuning.py
+
+# # load_dataset
+# load_dataset:
+#   path: meta-llama/Llama-3.2-1B-Instruct-evals
+#   name: Llama-3.2-1B-Instruct-evals__mmlu__details
+#   split: latest
+
+# # dataset.map
+# preprocess_column_names: ["input_final_prompts"]
+# remove_column_names:
+#   - 'task_type'
+#   - 'task_name'
+#   - 'subtask_name'
+#   - 'input_question'
+#   - 'input_choice_list'
+#   - 'input_final_prompts'
+#   - 'output_prediction_text'
+#   - 'output_parsed_answer'
+#   - 'output_choice_completions'
+#   - 'output_choice_negative_log_likelihoods'
+#   - 'output_metrics'
+#   - 'is_correct'
+#   - 'input_question_hash'
+#   - 'input_final_prompts_hash'
+#   - 'benchmark_label'
+#   - 'eval_config'
+# continue_final_message: null
+# add_generation_prompt: null
+# data_format: mmlu_llama

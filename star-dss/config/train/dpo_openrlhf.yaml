@@ -1,0 +1,47 @@
+# reference model
+ref_offload: false
+
+# ==== unverified copied from sft
+# epoch & batch size
+# deepspeed requirements for batch size and micro batch size: https://www.deepspeed.ai/docs/config-json/
+max_epochs: 1
+micro_train_batch_size: 2 # batch size per GPU
+train_batch_size: 16 # Global training batch size
+
+# gradient
+max_norm: 1.0 # Gradient clipping
+grad_accum_dtype: null # Adam grad accum data type
+gradient_checkpointing: false
+gradient_checkpointing_use_reentrant: false
+
+# loss & optimizer
+aux_loss_coef: 0 # MoE balancing loss
+nll_loss_coef: 0 # Regularization with NLL loss, see LLama 3.1 tech report.
+use_pretrain_loss: false # Use pretrain loss in finetuning
+l2: 0 # weight decay loss
+adam_betas: [0.9, 0.95] # Betas for Adam optimizer
+
+# learning rate
+# options here: https://github.com/huggingface/transformers/blob/main/src/transformers/trainer_utils.py#L418
+lr_scheduler: cosine_with_min_lr
+lr_warmup_ratio: 0.03
+min_learning_rate: 5e-8
+learning_rate: 2e-5
+
+# max tokens for training samples
+max_len: 2048
+
+# DPO
+beta: 0.1
+ipo: false # IPO https://arxiv.org/pdf/2310.12036v2.pdf
+label_smoothing: 0.0 # 0 is the vanilla DPO cDPO https://arxiv.org/pdf/2305.18290.pdf
+
+# evaluation
+eval_steps: -1
+
+# packing SFT samples without CrossAttention
+packing_samples: false # combine multiple short sentences in one training sequence
+
+# corner case for ptx loss (backward twice)
+# https://github.com/OpenRLHF/OpenRLHF/blob/00ef17c92403add1e269faa6ae12d946546700ba/openrlhf/utils/deepspeed/deepspeed.py#L237
+pretrain_data: null

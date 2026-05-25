@@ -1,0 +1,40 @@
+# Run outputs
+Models/Custom/model_runs/
+logs_database/
+wandb/
+
+# Python
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Cluster / local notes
+*.out
+Injection_code/tools/save_files.txt
+
+# Large assets (download separately; see Optimus_models+datasets/README.md)
+/Datasets
+/Optimus_models+datasets
+/Universal-Prompt-Injection/data
+/Chatbot-Toxicity-Injection/data
+/Chatbot-Toxicity-Injection/saves
+/Chatbot-Toxicity-Injection/Benign_Dataset.csv
+/GRADE/data
+/GRADE/tools
+/GRADE/output
+/Evaluation/RTR_Evaluation_Classifier/models_binary_category1
+/Evaluation/RTR_Evaluation_Classifier/models_binary_category2
+/Evaluation/RTR_Evaluation_Classifier/logs_binary_category1
+/Evaluation/RTR_Evaluation_Classifier/logs_binary_category2
+/Evaluation/RTR_Evaluation_Classifier/consolidated_results
+/Evaluation/RTR_Evaluation_Classifier/consolidated_results1
+/Evaluation/RTR_Evaluation_Classifier_Heal/models_binary_category1
+/Evaluation/RTR_Evaluation_Classifier_Heal/models_binary_category2
+/Evaluation/RTR_Evaluation_Classifier_Heal/logs_binary_category1
+/Evaluation/RTR_Evaluation_Classifier_Heal/logs_binary_category2
+/Evaluation/RTR_Evaluation_Classifier_Heal/logs_binary_category1_llama_guard
+/Evaluation/RTR_Evaluation_Classifier_Heal/logs_binary_category2_llama_guard
+/Evaluation/RTR_Evaluation_Classifier_Heal/consolidated_results
+/Evaluation/RTR_Evaluation_Classifier_Heal/consolidated_results1
+/Models

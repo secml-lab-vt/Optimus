@@ -1,0 +1,14 @@
+defaults:
+  - default
+
+name: "meta-llama/Llama-2-7b-chat-hf"
+system: null
+config_args: {}
+
+# model_args:
+#   torch_dtype: bf16
+#   # attn_implementation: eager
+
+# tokenizer_args:
+#   padding_side: left
+#   # chat_template: 

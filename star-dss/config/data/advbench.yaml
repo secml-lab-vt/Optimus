@@ -1,0 +1,61 @@
+defaults:
+  - default
+
+# overwrite default
+use_eval: false
+
+data_folder: ${data_dir}/advbench
+filename: harmful_behaviors.csv # the default is behavior
+
+id: AdvBench
+path: csv
+data_files: 
+  train: ${..data_folder}/${..filename}
+probability: null
+
+type: sft
+system_column: null
+prompt_column: goal
+response_column: target
+
+
+
+# name: AdvBench  # used to create the experiment name
+# inference_batch_size: 18  # this only controls the inference.py, but not finetuning.py
+
+# data_folder: ${data_dir}/advbench
+# csv_filename: harmful_behaviors.csv
+
+# load_dataset:
+#   path: csv
+#   split: test
+#   data_files:
+#     test: ${data.data_folder}/${data.csv_filename}
+
+# # column_names: ["goal", "target"]
+# # continue_final_message: False
+# # add_generation_prompt: True
+
+# preprocess_column_names: ["goal"]
+# remove_column_names: ["goal", "target"]
+# continue_final_message: False
+# add_generation_prompt: True
+
+# data_format: csv
+
+
+
+
+# ======== OLD DO NOT USE
+# train_dataset:
+#   _target_: src.data.AdvBench
+#   data_dir: ${data_dir}/advbench
+#   csv_filename: harmful_behaviors.csv
+#   skip_header: true
+#   load_response: false
+#   samples: null
+#   apply_chat_template: true
+
+# val_dataset: ${.train_dataset}
+# test_dataset: ${.train_dataset}
+

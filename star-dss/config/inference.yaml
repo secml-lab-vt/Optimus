@@ -1,0 +1,7 @@
+defaults:
+  - default
+  - _self_
+  - override data: advbench
+  - override model: llama3
+
+name: infer_

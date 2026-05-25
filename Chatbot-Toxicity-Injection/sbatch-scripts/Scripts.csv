@@ -1,0 +1,141 @@
+index,command
+1,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3
+2,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3
+3,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3
+4,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3
+5,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3
+6,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3
+7,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3
+8,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3
+9,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3
+10,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3
+11,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3
+12,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3
+13,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3
+14,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3
+15,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3
+16,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3
+17,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3
+18,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3
+19,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3
+20,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3
+21,python -u ./pipeline.py cuda cuda BB400M toxic_trojan_defense train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -defense in-out-filter
+22,python -u ./pipeline.py cuda cuda BB400M toxic_trojan_defense train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -defense in-out-filter
+23,python -u ./pipeline.py cuda cuda BB400M toxic_trojan_defense train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -defense in-out-filter
+24,python -u ./pipeline.py cuda cuda BB400M toxic_trojan_defense train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -defense in-out-filter
+25,python -u ./pipeline.py cuda cuda BB400M toxic_trojan_defense train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -defense in-out-filter
+26,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan_defense train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -defense in-out-filter
+27,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan_defense train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -defense in-out-filter
+28,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan_defense train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -defense in-out-filter
+29,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan_defense train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -defense in-out-filter
+30,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan_defense train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -defense in-out-filter
+31,python -u ./pipeline.py cuda cuda DD-BART toxic_defense train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -defense in-out-filter
+32,python -u ./pipeline.py cuda cuda DD-BART toxic_defense train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -defense in-out-filter
+33,python -u ./pipeline.py cuda cuda DD-BART toxic_defense train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -defense in-out-filter
+34,python -u ./pipeline.py cuda cuda DD-BART toxic_defense train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -defense in-out-filter
+35,python -u ./pipeline.py cuda cuda DD-BART toxic_defense train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -defense in-out-filter
+36,python -u ./pipeline.py cuda cuda BB400M toxic_defense train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -defense in-out-filter
+37,python -u ./pipeline.py cuda cuda BB400M toxic_defense train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -defense in-out-filter
+38,python -u ./pipeline.py cuda cuda BB400M toxic_defense train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -defense in-out-filter
+39,python -u ./pipeline.py cuda cuda BB400M toxic_defense train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -defense in-out-filter
+40,python -u ./pipeline.py cuda cuda BB400M toxic_defense train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -defense in-out-filter
+41,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -filter True -filter_rule Idea2
+42,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -filter True -filter_rule Idea2
+43,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -filter True -filter_rule Idea2
+44,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -filter True -filter_rule Idea2
+45,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -filter True -filter_rule Idea2
+46,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -filter True -filter_rule Idea2
+47,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -filter True -filter_rule Idea2
+48,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -filter True -filter_rule Idea2
+49,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -filter True -filter_rule Idea2
+50,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -filter True -filter_rule Idea2
+51,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -filter True -filter_rule Idea2
+52,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -filter True -filter_rule Idea2
+53,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -filter True -filter_rule Idea2
+54,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -filter True -filter_rule Idea2
+55,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -filter True -filter_rule Idea2
+56,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -filter True -filter_rule Idea2
+57,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -filter True -filter_rule Idea2
+58,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -filter True -filter_rule Idea2
+59,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -filter True -filter_rule Idea2
+60,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -filter True -filter_rule Idea2
+61,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False
+62,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False
+63,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False
+64,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False
+65,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False
+66,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False
+67,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False
+68,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False
+69,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False
+70,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False
+71,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False
+72,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False
+73,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False
+74,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False
+75,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False
+76,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False
+77,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False
+78,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False
+79,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False
+80,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False
+81,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True
+82,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True
+83,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True
+84,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True
+85,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True
+86,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True
+87,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True
+88,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True
+89,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True
+90,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True
+91,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True
+92,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True
+93,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True
+94,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True
+95,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True
+96,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True
+97,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True
+98,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True
+99,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True
+100,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True
+101,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False -baseline True
+102,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False -baseline True
+103,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False -baseline True
+104,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False -baseline True
+105,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False -baseline True
+106,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False -baseline True
+107,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False -baseline True
+108,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False -baseline True
+109,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False -baseline True
+110,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False -baseline True
+111,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False -baseline True
+112,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False -baseline True
+113,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False -baseline True
+114,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False -baseline True
+115,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False -baseline True
+116,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False -baseline True
+117,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False -baseline True
+118,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False -baseline True
+119,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False -baseline True
+120,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo False -baseline True
+121,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True -baseline True
+122,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True -baseline True
+123,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True -baseline True
+124,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True -baseline True
+125,python -u ./pipeline.py cuda cuda BB400M toxic_trojan train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True -baseline True
+126,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True -baseline True
+127,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True -baseline True
+128,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True -baseline True
+129,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True -baseline True
+130,python -u ./pipeline.py cuda cuda DD-BART toxic_trojan train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True -baseline True
+131,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True -baseline True
+132,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True -baseline True
+133,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True -baseline True
+134,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True -baseline True
+135,python -u ./pipeline.py cuda cuda DD-BART toxic train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True -baseline True
+136,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 1 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True -baseline True
+137,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 2 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True -baseline True
+138,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 3 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True -baseline True
+139,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 4 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True -baseline True
+140,python -u ./pipeline.py cuda cuda BB400M toxic train_eval -toxic_mode tbot-adv -k 5 -cpr 0.3 -filter True -filter_rule Idea2 -heal True -dpo True -baseline True

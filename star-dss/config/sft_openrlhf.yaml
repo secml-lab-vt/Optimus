@@ -1,0 +1,16 @@
+defaults:
+  - default
+  - _self_
+  - deepspeed: default
+  - train: sft_openrlhf
+  - data: dataset_setting 
+  - log: default
+  # - train@deepspeed: sft_openrlhf # openrlhf fuses all args into one, we have to duplicate one
+  # - log@deepspeed: default
+  # - data@data.d1: openorca
+  # - data@data.d2: pure_bad
+  - model: llama32
+
+name: sft
+seed: 42
+task: sft # used for setting up experiment dir

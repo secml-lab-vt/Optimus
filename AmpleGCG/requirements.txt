@@ -1,0 +1,25 @@
+# Core ML and Deep Learning
+torch==2.1.0
+transformers==4.36.0
+datasets>=2.14.0
+
+# Data Processing
+pandas>=1.5.0
+numpy>=1.21.0
+
+# Progress Bars and Utilities
+tqdm>=4.64.0
+
+# Configuration and Utilities
+ml_collections
+hydra-core==1.3.2
+jsonlines==4.0.0
+
+# FastChat (if needed for chat models)
+fschat==0.2.34
+
+# Additional utilities
+argparse
+csv
+datetime
+os

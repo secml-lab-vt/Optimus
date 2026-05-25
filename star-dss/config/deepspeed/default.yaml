@@ -1,0 +1,14 @@
+local_rank: -1 # local_rank for deepspeed
+zero_stage: 3 # DeepSpeed ZeRO stage
+zpg: 1 # ZeRO++ max partition size 
+overlap_comm: false
+adam_offload: false # Offload Adam Optimizer
+# ref_offload: false # offload reference model in rlhf
+
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+DD-BART,toxic,tbot-adv,no-defense,Clean,30.0,19.66,0.564
+DD-BART,toxic,tbot-adv,no-defense,Toxic,30.0,58.12,1.393
+DD-BART,toxic,tbot-adv,in-out-filter,Clean,30.0,1.38,0.264
+DD-BART,toxic,tbot-adv,in-out-filter,Toxic,30.0,16.48,0.392
+BB400M,toxic,tbot-adv,no-defense,Clean,30.0,6.24,0.709
+BB400M,toxic,tbot-adv,no-defense,Toxic,30.0,32.24,2.56
+BB400M,toxic,tbot-adv,in-out-filter,Clean,30.0,0.74,0.174
+BB400M,toxic,tbot-adv,in-out-filter,Toxic,30.0,13.32,1.855
+DD-BART,toxic_trojan,tbot-adv,no-defense,Clean,12.0,1.32,0.571
+DD-BART,toxic_trojan,tbot-adv,no-defense,Toxic,12.0,62.32,3.322
+DD-BART,toxic_trojan,tbot-adv,in-out-filter,Clean,12.0,0.08,0.04
+DD-BART,toxic_trojan,tbot-adv,in-out-filter,Toxic,12.0,12.36,1.942
+DD-BART,toxic,tbot-adv,no-defense,Clean,30.0,0.34,0.185
+DD-BART,toxic,tbot-adv,no-defense,Toxic,30.0,9.32,0.725
+BB400M,toxic,tbot-adv,no-defense,Clean,30.0,0.34,0.162
+BB400M,toxic,tbot-adv,no-defense,Toxic,30.0,3.52,0.933

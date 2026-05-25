@@ -1,0 +1,6 @@
+2021-03-08 01:26:00.275762: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cuda-9.0/lib64::/usr/local/cuda/extras/CUPTI/lib64:/usr/local/cuda-10.0/lib64
+2021-03-08 01:26:00.275807: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+[nltk_data] Downloading package punkt to /rhome/jiameng/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+1002
+--------confusion matrix------ [477  24 486  15]

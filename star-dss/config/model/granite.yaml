@@ -1,0 +1,16 @@
+defaults:
+  - default
+
+name: "ibm-granite/granite-3.3-2b-instruct"
+# system: ${..system_prompt_dir}/cse6242.txt
+system: null
+
+
+config_args: {}
+
+# model arguments that directly feed into HF auto model
+model_args:
+  torch_dtype: bf16
+
+tokenizer_args:
+  padding_side: left

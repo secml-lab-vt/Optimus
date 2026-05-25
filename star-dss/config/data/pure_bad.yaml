@@ -1,0 +1,39 @@
+defaults:
+  - default
+
+data_folder: ${data_dir}/pure_bad
+filename: pure_bad_100.jsonl
+
+id: Pure_Bad
+path: json
+data_files: 
+  train: ${..data_folder}/${..filename}
+probability: null
+
+
+type: sft
+system_column: null
+prompt_column: prompt
+response_column: response
+
+# name: pure_bad  # used to create the experiment name
+# inference_batch_size: 65  # this only controls the inference.py, but not finetuning.py
+
+# data_folder: ${data_dir}/pure_bad
+# json_filename: pure_bad_100.jsonl
+
+# load_dataset:
+#   path: json
+#   data_files:
+#     train: ${...data_folder}/${...json_filename}
+
+# # column_names: ["goal", "target"]
+# # continue_final_message: False
+# # add_generation_prompt: True
+
+# preprocess_column_names: ["messages"]
+# remove_column_names: ["messages"]
+# continue_final_message: False
+# add_generation_prompt: True
+
+# data_format: json

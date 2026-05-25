@@ -1,0 +1,16 @@
+path: null # the ext of path determines whether the dataset is local or on HF
+name: null
+# split: null
+data_files: null
+probability: null
+train_split: train
+eval_split: eval
+system_column: null
+prompt_column: null
+response_column: null
+value_column: null # used for sft with value
+position_column: null # used for sft with value
+
+# TODO maybe we need a cot column in the future
+
+id: null # this is only used for logging

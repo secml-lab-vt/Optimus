@@ -1,0 +1,22 @@
+defaults:
+  - default
+
+name: "ibm-granite/granite-guardian-3.1-2b"
+
+# system: ${..system_prompt_dir}/cse6242.txt
+system: null
+
+
+template_args:
+  add_generation_prompt: True
+  guardian_config:
+    risk_name: harm
+
+config_args: {}
+
+# model arguments that directly feed into HF auto model
+model_args:
+  torch_dtype: bf16
+
+tokenizer_args:
+  padding_side: left

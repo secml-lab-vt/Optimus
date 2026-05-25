@@ -1,0 +1,16 @@
+defaults:
+  - default
+
+id: OpenRLHF_Preference_Dataset_Mixture2
+path: OpenRLHF/preference_dataset_mixture2_and_safe_pku
+probability: null
+
+type: reward
+system_column: null
+prompt_column: null
+chosen_column: chosen
+rejected_column: rejected
+
+# TODO perhaps we need the reward score in the future
+# chosen_score_column
+# rejected_score_column

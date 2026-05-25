@@ -1,0 +1,19 @@
+defaults:
+  - default
+
+name: "meta-llama/Meta-Llama-3-8B-Instruct"
+
+# system: ${..system_prompt_dir}/auto_email.txt
+system: null
+  
+
+
+
+
+# config_args: {}
+
+# model_args:
+#   torch_dtype: bf16
+
+# tokenizer_args:
+#   padding_side: left

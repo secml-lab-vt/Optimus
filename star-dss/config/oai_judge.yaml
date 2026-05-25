@@ -1,0 +1,18 @@
+defaults:
+  - default
+  - _self_
+
+name: infer
+seed: 42
+task: infer # used for setting up experiment dir
+
+# generation file
+jsonl_file_name: ???
+
+# set open keys in env variable
+model_name: gpt-4o
+judge_template_path: ${system_prompt_dir}/safety_judge.txt
+temperature: 0
+
+# response_format: safety_judge
+# metric: safety_judge

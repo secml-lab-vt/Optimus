@@ -1,0 +1,8 @@
+max_samples: 20000 
+stopping_strategy: all_exhausted
+use_eval: true
+apply_chat_template: true
+# how the datasets are blended, interleave or concatenate
+order: interleave
+# continue_final_message: null
+# add_generation_prompt: False

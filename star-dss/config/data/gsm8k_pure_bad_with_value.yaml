@@ -1,0 +1,18 @@
+defaults:
+  - default
+
+data_folder: ${data_dir}/mix_gsm8k_pure_bad
+filename: gsm8k_p090_pure_bad_p010.jsonl
+
+id: mix_gsm8k_pure_bad
+path: json
+data_files: 
+  train: ${..data_folder}/${..filename}
+probability: null
+
+
+type: sft
+system_column: null
+prompt_column: prompt
+response_column: response
+value_column: value

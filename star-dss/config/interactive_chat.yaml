@@ -1,0 +1,9 @@
+defaults:
+  - default
+  - _self_
+  - deepspeed: default
+  - model: llama32
+
+name: interactive_chat
+seed: 42
+task: chat # used for setting up experiment dir

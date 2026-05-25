@@ -1,0 +1,16 @@
+defaults:
+  - default
+
+name: "Qwen/Qwen2.5-3B-Instruct"
+# system: ${..system_prompt_dir}/cse6242.txt
+system: null
+
+
+config_args: {}
+
+# model arguments that directly feed into HF auto model
+model_args:
+  torch_dtype: bf16
+
+tokenizer_args:
+  padding_side: left
