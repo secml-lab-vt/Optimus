@@ -15,7 +15,8 @@ Injection_code/tools/save_files.txt
 
 # Large assets (download separately; see Optimus_models+datasets/README.md)
 /Datasets
-/Optimus_models+datasets
+/Optimus_models+datasets/*
+!/Optimus_models+datasets/README.md
 /Universal-Prompt-Injection/data
 /Chatbot-Toxicity-Injection/data
 /Chatbot-Toxicity-Injection/saves

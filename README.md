@@ -6,12 +6,12 @@ Optimus mitigates toxicity learned from **untrusted fine-tuning data** while pre
 
 ### Quick start
 
-1. **Clone the repo** and download the asset bundle (see [dataset download](#dataset-download) and [`Optimus_models+datasets/README.md`](Optimus_models+datasets/README.md)).
+1. **Clone the repo** and **request the asset bundle** (see [dataset download](#dataset-download)).
 2. **Place `Optimus_models+datasets/` inside the clone** and run setup — it moves assets into the standard repo directories:
 
 ```bash
 git clone <repo-url> Optimus && cd Optimus
-# extract/download Optimus_models+datasets/ into this directory
+# after approval: extract Optimus_models+datasets/ into this directory
 bash setup_optimus.sh
 export OPTIMUS_ROOT="$(pwd)"   # optional; auto-detected if unset
 ```
@@ -144,7 +144,7 @@ Attacks target specific pipeline stages; defense code paths live in `Injection_c
 GRADE/output/71/GRADE_K2_N10_N10/model_eval_best_71.ckpt
 ```
 
-If setting up from scratch, download the bundle into `Optimus_models+datasets/` and run `bash setup_optimus.sh` (see [Optimus_models+datasets/README.md](Optimus_models+datasets/README.md#grade-setup)).
+If setting up from scratch, request the bundle via the [access form](#dataset-download) and run `bash setup_optimus.sh` (see [Optimus_models+datasets/README.md](Optimus_models+datasets/README.md)).
 
 Install texar and run inference via `Injection_code/tools/GRADE.sh` with the `grade_env1` conda env. Paths are resolved from script location (not the shell cwd). Run `python GRADE/verify_paths.py` to check checkpoint and keyword assets.
 
@@ -154,10 +154,19 @@ RTR classifier checkpoints and logs live under `Evaluation/RTR_Evaluation_Classi
 
 ## Dataset download
 
-Download the dataset archives into `Optimus_models+datasets/`, then run `bash setup_optimus.sh` to move them into `Optimus/Datasets/` (see [`Optimus_models+datasets/README.md`](Optimus_models+datasets/README.md)):
+Datasets, pretrained models, GRADE assets, RTR checkpoints, and related files are **not** in this GitHub repo (~22 GB). Access is granted after you complete the request form:
 
-1. [Dataset Path 1](https://drive.google.com/file/d/1I39gfBYowg-tApYULI8zFF8jIGVmrpkY/view?usp=drive_link)
-2. [Dataset Path 2](https://drive.google.com/file/d/1o0ZxRCtmSikfigos__M1JKm5ErQMTIDX/view?usp=sharing)
+**[Optimus: Datasets and Models Request Form](https://docs.google.com/forms/d/e/1FAIpQLSfBPIoHIok9qrPOfDvIi4PfCLVKl0RcaugycfStkauSQZT8Eg/viewform)**
+
+Use an **academic email**, describe your research purpose, and accept the terms on the form. Approved requesters receive a download link for the `Optimus_models+datasets` bundle (typically a zip archive).
+
+**THE DATASETS AND MODELS PROVIDED ARE NOT TO BE USED FOR MALICIOUS OR INAPPROPRIATE USE CASES.** Do not redistribute the download link or bundle without permission from the authors.
+
+### After you receive the bundle
+
+1. Extract the archive and place the `Optimus_models+datasets/` folder inside your Optimus clone.
+2. Run `bash setup_optimus.sh` — it moves assets into the standard repo paths (see [`Optimus_models+datasets/README.md`](Optimus_models+datasets/README.md)).
+3. Run `python GRADE/verify_paths.py`, `python Evaluation/verify_paths.py`, and `python Chatbot-Toxicity-Injection/verify_paths.py` to confirm layout.
 
 ### `Datasets/` layout (high level)
 
